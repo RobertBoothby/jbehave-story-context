@@ -23,7 +23,7 @@ import static org.hamcrest.Matchers.endsWith;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.nullValue;
 import static org.hamcrest.Matchers.startsWith;
-import static storycontext.DefaultStoryContext.storyContext;
+import static storycontext.ThreadSafeStoryContext.storyContext;
 import static storycontext.StoryContextKey.storyContextKey;
 
 /**
@@ -31,7 +31,7 @@ import static storycontext.StoryContextKey.storyContextKey;
  *
  * @author Robert Boothby
  */
-public class DefaultStoryContextTest {
+public class ThreadSafeStoryContextTest {
 
     private static final StoryContextKey<String> aStringKey = storyContextKey("Storing a String");
     private static final StoryContextKey<String> anotherStringKey = storyContextKey("Storing another String");
@@ -94,7 +94,7 @@ public class DefaultStoryContextTest {
         String storyContextString = storyContext.toString();
 
         //Then
-        assertThat(storyContextString, startsWith("DefaultStoryContext{typedMap={"));
+        assertThat(storyContextString, startsWith("ThreadSafeStoryContext{typedMap={"));
         assertThat(storyContextString, endsWith("}}"));
         assertThat(storyContextString, containsString("StoryContextKey{ 'Storing an Integer' } = '1'"));
         assertThat(storyContextString, containsString("StoryContextKey{ 'Storing another String' } = 'Another stored String'"));
