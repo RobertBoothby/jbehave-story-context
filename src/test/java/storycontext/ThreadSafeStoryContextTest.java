@@ -27,6 +27,9 @@ import static storycontext.ThreadSafeStoryContext.storyContext;
 import static storycontext.StoryContextKey.storyContextKey;
 
 /**
+ * <p>Unfortunately this is an extremely tough class to test the concurrency on as the unit of concurrency is the whole
+ * class and is synchronized at method level. The concurrency semantic is very simple, synchronized on an internal mutex
+ * object at method level but if I can't test it, I'm wondering if it has any value...</p>
  * <p>&#169; 2014 Robert Boothby.</p>
  *
  * @author Robert Boothby

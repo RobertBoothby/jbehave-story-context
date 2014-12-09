@@ -15,23 +15,22 @@ limitations under the License.
 */
 package storycontext;
 
-import org.jbehave.core.annotations.AfterStory;
+import org.junit.Test;
 
 /**
- * <p>&#169; 2014 Robert Boothby.</p>
+ * <p>&#169; 2014 Forest View Developments Ltd.</p>
  *
- * @author Robert Boothby
+ * @author robertboothby
  */
-public class StoryContextSteps {
+public class ContextualStoryReporterBuilderTest {
+    @Test
+    public void shouldReportStoryContextDuringTestFailures() {
+        //Given
 
-    private final StoryContext storyContext;
 
-    public StoryContextSteps(StoryContext storyContext) {
-        this.storyContext = storyContext;
-    }
+        //When
 
-    @AfterStory
-    public void resetStoryContext(){
-        storyContext.reset();
+        //Then
+
     }
 }

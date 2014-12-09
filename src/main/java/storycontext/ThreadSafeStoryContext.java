@@ -52,7 +52,9 @@ public class ThreadSafeStoryContext implements StoryContext {
 
     @Override
     public String toString() {
-        return new StringBuilder(ThreadSafeStoryContext.class.getSimpleName())
-                .append("{typedMap={ \n").append(wrappedContext.contentsAsString()).append("\n}}").toString();
+        synchronized (mutex) {
+            return new StringBuilder(ThreadSafeStoryContext.class.getSimpleName())
+                    .append("{typedMap={ \n").append(wrappedContext.contentsAsString()).append("\n}}").toString();
+        }
     }
 }
