@@ -13,24 +13,12 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 */
-package storycontext;
-
-import org.junit.Test;
+package storycontext.bdd.testdomain;
 
 /**
- * <p>&#169; 2014 Forest View Developments Ltd.</p>
+ * <p>&#169; 2015 Robert Boothby.</p>
  *
  * @author robertboothby
  */
-public class ContextualStoryReporterBuilderTest {
-    @Test
-    public void shouldReportStoryContextDuringTestFailures() {
-        //Given
-
-
-        //When
-
-        //Then
-
-    }
+public class Book {
 }
